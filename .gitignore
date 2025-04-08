@@ -4,7 +4,7 @@
 .terraform/
 
 # Sensible config
-terraform.tfvars
+#terraform.tfvars
 
 # Docker volumes
 nodered_data/

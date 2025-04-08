@@ -1,23 +1,42 @@
-# Calibration & Control Software Infrastructure
+# 🛠️ Calibration & Control Infrastructure
 
-Este proyecto define una arquitectura de monitoreo y adquisición de datos basada en contenedores Docker, orquestada mediante Terraform.
+Este proyecto define una infraestructura local con **Docker** y **Terraform** que levanta automáticamente tres servicios esenciales para un entorno de calibración y control:
 
-## 🧩 Servicios incluidos
+- **Node-RED** con plugin Siemens S7 e InfluxDB instalados
+- **InfluxDB 2.7** para almacenar datos de proceso
+- **Grafana** listo para conectar a InfluxDB en http://influxdb:8086
 
-- **Node-RED**: con el plugin `node-red-contrib-s7` instalado para comunicarse con PLC Siemens S7-1200
-- **InfluxDB 2.7.11**: almacenamiento de series temporales
-- **Grafana**: visualización de datos desde InfluxDB
+---
 
-## 🚀 Cómo desplegar
+## 📦 Tecnologías utilizadas
 
-1. Asegurate de tener instalados:
+- [Terraform](https://www.terraform.io/)
+- [Docker](https://www.docker.com/)
+- [Node-RED](https://nodered.org/)
+- [Grafana](https://grafana.com/)
+- [InfluxDB](https://www.influxdata.com/)
 
-   - [Docker Desktop](https://www.docker.com/products/docker-desktop)
-   - [Terraform](https://developer.hashicorp.com/terraform/downloads)
-   - PowerShell (incluido en Windows)
+---
 
-2. Ejecutá el siguiente script:
+## ⚙️ Requisitos
 
-```powershell
-Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
-.\deploy.ps1
+- Windows 10/11 con Docker Desktop instalado
+- Terraform instalado y en el PATH
+- Git instalado
+- WSL2 o Hyper-V habilitado (dependiendo de tu versión de Windows)
+
+---
+
+## 🚀 Instalación
+
+### 1. Clonar el repositorio
+
+```bash
+git clone https://github.com/tu-usuario/calibration-infra.git
+cd calibration-infra
+```
+
+### 2. Usar el script automático
+
+```bash
+./deploy.sh

@@ -1,4 +1,4 @@
-# 🛠️ Calibration & Control Infrastructure
+# 🛠️ Node-Red + InfluxDB + Grafana IIOT Infrastructure
 
 Este proyecto define una infraestructura local con **Docker** y **Terraform** que levanta automáticamente tres servicios esenciales para un entorno de calibración y control:
 

@@ -16,18 +16,9 @@ resource "docker_network" "calibration_net" {
 }
 
 # Node-RED
-
-# resource "docker_image" "nodered" {
-#   name = "guille/nodered-s7"
-# }
-
-# resource "docker_image" "nodered" {
-#   name = "guille/guille-nodered"
-# }
-
 resource "docker_container" "nodered" {
   name  = "nodered"
-  image = "guille-nodered:latest"
+  image = "s7influx-nodered:latest"
 
   ports {
     internal = 1880
